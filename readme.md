@@ -18,6 +18,9 @@
 - php artisan migrate
 - php artisan passport:install
 
+# How to Execute Unit Test
+- vendor/bin/phpunit
+
 # Upload collection into Postman
 - Import file named "Akbar Jelajah.postman_collection.json"
 - There is 3 folders, User for registering user, News for CRUD News, and Comments for CRUD Comments
@@ -29,3 +32,5 @@ c_password, and role (fill it with admin or user)
 - To create News, Login as admin then hit Endpoint POST {{url}}/akbar-jelajah/public/api/news, fill headers Authorization with 'Bearer {{your_access_token}}'
 - To create Comments, Login as user then hit Endpoint POST {{url}}/akbar-jelajah/public/api/comment, fill headers Authorization with 'Bearer {{your_access_token}}'
 - To get News details, hit Endpoint GET {{url}}/akbar-jelajah/public/api/news
+
+
