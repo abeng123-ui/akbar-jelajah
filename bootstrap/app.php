@@ -10,6 +10,12 @@
 | the IoC container for the system binding all of the various parts.
 |
 */
+try {
+    if (!isset($_ENV['APP_ENV']) || $_ENV['APP_ENV'] != 'testing')
+    (new Dotenv\Dotenv(__DIR__ . '/../'))->overload();
+} catch (Dotenv\Exception\InvalidPathException $e) {
+    //
+}
 
 $app = new Illuminate\Foundation\Application(
     realpath(__DIR__.'/../')
